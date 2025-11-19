@@ -15,13 +15,13 @@ export default function Home() {
       <LayoutLines />
       <Navbar />
       <Hero />
-      <Logos />
+      {/* <Logos /> */}
       <Items />
       <Stats />
-      <Pricing />
-      <FAQ />
+      {/* <Pricing /> */}
+      {/* <FAQ /> */}
       <CTA />
-      <Footer />
+      {/* <Footer /> */}
     </main>
   );
 }

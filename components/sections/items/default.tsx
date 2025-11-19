@@ -1,16 +1,16 @@
 import {
-  BlocksIcon,
-  EclipseIcon,
-  FastForwardIcon,
-  LanguagesIcon,
-  MonitorSmartphoneIcon,
-  RocketIcon,
-  ScanFaceIcon,
-  SquarePenIcon,
+  BellIcon,
+  CheckCircleIcon,
+  DatabaseIcon,
+  LockIcon,
+  QrCodeIcon,
+  ShieldCheckIcon,
+  SmartphoneIcon,
+  TrendingUpIcon,
 } from "lucide-react";
 import { ReactNode } from "react";
 
-import { Item, ItemDescription,ItemIcon, ItemTitle } from "../../ui/item";
+import { Item, ItemDescription, ItemIcon, ItemTitle } from "../../ui/item";
 import { Section } from "../../ui/section";
 
 interface ItemProps {
@@ -26,50 +26,47 @@ interface ItemsProps {
 }
 
 export default function Items({
-  title = "Everything you need. Nothing you don't.",
+  title = "What we offer",
   items = [
     {
-      title: "Accessibility first",
-      description: "Fully WCAG 2.0 compliant, made with best a11y practices",
-      icon: <ScanFaceIcon className="size-5 stroke-1" />,
+      title: "QR Code Registration",
+      description: "Instantly register warranties by scanning QR codes - no lengthy forms required",
+      icon: <QrCodeIcon className="size-5 stroke-1" />,
     },
     {
-      title: "Responsive design",
-      description: "Looks and works great on any device and screen size",
-      icon: <MonitorSmartphoneIcon className="size-5 stroke-1" />,
+      title: "Smart Notifications",
+      description: "Get automatic alerts before warranties expire and never miss a claim deadline",
+      icon: <BellIcon className="size-5 stroke-1" />,
     },
     {
-      title: "Light and dark mode",
-      description:
-        "Seamless switching between color schemes, 6 themes included",
-      icon: <EclipseIcon className="size-5 stroke-1" />,
+      title: "Centralized Storage",
+      description: "Store all warranty documents and receipts digitally in one secure place",
+      icon: <DatabaseIcon className="size-5 stroke-1" />,
     },
     {
-      title: "Easy to customize",
-      description: "Flexible options to match your product or brand",
-      icon: <BlocksIcon className="size-5 stroke-1" />,
+      title: "Automated Claims",
+      description: "Track warranty claims in real-time with automated validation and processing",
+      icon: <CheckCircleIcon className="size-5 stroke-1" />,
     },
     {
-      title: "Top-level performance",
-      description: "Made for lightning-fast load times and smooth interactions",
-      icon: <FastForwardIcon className="size-5 stroke-1" />,
+      title: "Mobile Access",
+      description: "Access your warranty information anytime, anywhere from your mobile device",
+      icon: <SmartphoneIcon className="size-5 stroke-1" />,
     },
     {
-      title: "Production ready",
-      description: "Thoroughly tested and launch-prepared",
-      icon: <RocketIcon className="size-5 stroke-1" />,
+      title: "Secure & Private",
+      description: "Your warranty data is encrypted and protected with enterprise-grade security",
+      icon: <LockIcon className="size-5 stroke-1" />,
     },
     {
-      title: "Made for localisation",
-      description:
-        "Easy to implement support for multiple languages and regions",
-      icon: <LanguagesIcon className="size-5 stroke-1" />,
+      title: "Cost Savings",
+      description: "Reduce repair costs by up to 20% by leveraging warranty coverage effectively",
+      icon: <TrendingUpIcon className="size-5 stroke-1" />,
     },
     {
-      title: "CMS friendly",
-      description:
-        "Built to work with your any headless content management system",
-      icon: <SquarePenIcon className="size-5 stroke-1" />,
+      title: "Verified Protection",
+      description: "Blockchain-verified warranty records that are tamper-proof and trustworthy",
+      icon: <ShieldCheckIcon className="size-5 stroke-1" />,
     },
   ],
   className,

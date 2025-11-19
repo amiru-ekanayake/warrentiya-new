@@ -17,26 +17,28 @@ interface StatsProps {
 export default function Stats({
   items = [
     {
-      label: "used by",
-      value: Math.round(siteConfig.stats.figma / 100) / 10,
-      suffix: "k",
-      description: "designers on Figma Community",
-    },
-    {
       label: "over",
-      value: siteConfig.stats.github,
-      description: "clones and forks of the template on Github",
+      value: "10.7",
+      suffix: "B",
+      description: "global warranty management market by 2030",
     },
     {
-      label: "already",
-      value: Math.round(siteConfig.stats.cli / 100) / 10,
-      suffix: "k",
-      description: "installations with shadcn/ui CLI",
+      label: "growing at",
+      value: 14.7,
+      suffix: "%",
+      description: "annual growth rate in digital warranty adoption",
     },
     {
-      label: "includes",
-      value: siteConfig.stats.sections,
-      description: "blocks and sections",
+      label: "reduce costs by",
+      value: 20,
+      suffix: "%",
+      description: "through automated warranty claim processing",
+    },
+    {
+      label: "serving",
+      value: "35",
+      suffix: "%",
+      description: "of consumer electronics market with digital warranties",
     },
   ],
   className,
