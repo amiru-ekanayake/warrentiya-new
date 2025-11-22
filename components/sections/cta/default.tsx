@@ -1,6 +1,8 @@
 import { type VariantProps } from "class-variance-authority";
 import { ReactNode } from "react";
 
+import { SignInButton, SignUpButton } from "@clerk/nextjs";
+
 import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
 
@@ -42,18 +44,15 @@ export default function CTA({
         {buttons !== false && buttons.length > 0 && (
           <div className="flex justify-center gap-4">
             {buttons.map((button, index) => (
-              <Button
-                key={index}
-                variant={button.variant || "default"}
-                size="lg"
-                asChild
-              >
-                <a href={button.href}>
-                  {button.icon}
-                  {button.text}
-                  {button.iconRight}
-                </a>
-              </Button>
+              <SignUpButton key={index} mode="modal" forceRedirectUrl="/waitlist">
+                  <Button variant={button.variant || "default"} asChild>
+                  <a>
+                    {button.icon}
+                    {button.text}
+                    {button.iconRight}
+                  </a>
+                  </Button>
+                </SignUpButton>
             ))}
           </div>
         )}
