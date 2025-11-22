@@ -473,15 +473,15 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$navigati
 function Navigation(param) {
     let { menuItems = [
         {
-            title: "Getting started",
+            title: "Our Services",
             content: "default"
         },
         {
-            title: "Components",
+            title: "Stats",
             content: "components"
         },
         {
-            title: "Documentation",
+            title: "About Us",
             isLink: true,
             href: __TURBOPACK__imported__module__$5b$project$5d2f$config$2f$site$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["siteConfig"].url
         }
@@ -964,11 +964,11 @@ function Navbar(param) {
             href: __TURBOPACK__imported__module__$5b$project$5d2f$config$2f$site$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["siteConfig"].url
         },
         {
-            text: "About Us",
+            text: "Stats",
             href: __TURBOPACK__imported__module__$5b$project$5d2f$config$2f$site$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["siteConfig"].url
         },
         {
-            text: "Pricing",
+            text: "About Us",
             href: __TURBOPACK__imported__module__$5b$project$5d2f$config$2f$site$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["siteConfig"].url
         }
     ], actions = [
