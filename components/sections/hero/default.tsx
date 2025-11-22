@@ -2,6 +2,8 @@ import { type VariantProps } from "class-variance-authority";
 import { ArrowRightIcon } from "lucide-react";
 import { ReactNode } from "react";
 
+import { SignInButton, SignUpButton } from "@clerk/nextjs";
+
 import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
 
@@ -34,10 +36,10 @@ export default function Hero({
   title = "Digital Warranty Wallet",
   description = "Sri Lanka's easiest way to manage and protect your purchase warranties.",
   mockup = (
-    <div className="relative flex flex-col items-center justify-center w-full max-w-6xl mx-auto gap-6 sm:flex-row sm:gap-10">
+    <div className="relative flex items-center justify-center gap-6 w-full max-w-6xl mx-auto">
       {/* Desktop Mockup - Centered */}
-      <div className="hidden sm:block flex-1 max-w-3xl">
-        <MockupFrame className="w-full">
+      <div className="flex-1 max-w-3xl">
+        <MockupFrame className="w-full" >
           <Mockup
             type="responsive"
             className="bg-background/90 w-full rounded-xl border-0 p-8"
@@ -118,100 +120,98 @@ export default function Hero({
       </div>
 
       {/* Mobile Mockup - Centered alongside desktop */}
-      {/* Mobile Mockup - Always visible, centered */}
-<div className="flex-shrink-0 w-full max-w-xs sm:max-w-[20rem]">
-  <MockupFrame className="w-full shadow-2xl">
-    <Mockup className="bg-background/95 w-full rounded-2xl border-0 p-5">
-      <div className="flex flex-col items-center w-full gap-4">
-        {/* Mobile Header - Centered */}
-        <div className="text-center space-y-1 w-full">
-          <h2 className="text-xl font-bold">My Warranties</h2>
-          <p className="text-muted-foreground text-xs">Track all your products</p>
-        </div>
-        
-        {/* Stats Summary - Centered */}
-        <div className="grid grid-cols-3 gap-2 mb-2 w-full">
-          <div className="bg-card rounded-lg border p-2 text-center flex flex-col items-center">
-            <p className="text-xs text-muted-foreground mb-1">Active</p>
-            <p className="text-xl font-bold text-green-600">18</p>
-          </div>
-          <div className="bg-card rounded-lg border p-2 text-center flex flex-col items-center">
-            <p className="text-xs text-muted-foreground mb-1">Expiring</p>
-            <p className="text-xl font-bold text-orange-600">3</p>
-          </div>
-          <div className="bg-card rounded-lg border p-2 text-center flex flex-col items-center">
-            <p className="text-xs text-muted-foreground mb-1">Total</p>
-            <p className="text-xl font-bold">24</p>
-          </div>
-        </div>
-        
-        {/* Warranty Cards - Centered */}
-        <div className="flex flex-col items-center w-full gap-3">
-          {/* Active Warranty Card */}
-          <div className="bg-card rounded-lg border p-3.5 shadow-sm w-full">
-            <div className="flex items-center justify-between mb-3 w-full">
-              <div className="flex-1 text-left">
-                <p className="font-semibold text-sm">iPhone 15 Pro</p>
-                <p className="text-muted-foreground text-xs mt-0.5">Apple Inc.</p>
+      <div className="flex-shrink-0">
+        <MockupFrame className="w-80 shadow-2xl">
+          <Mockup className="bg-background/95 w-full rounded-2xl border-0 p-5">
+            <div className="flex flex-col gap-4">
+              {/* Mobile Header - Centered */}
+              <div className="text-center space-y-1">
+                <h2 className="text-xl font-bold">My Warranties</h2>
+                <p className="text-muted-foreground text-xs">Track all your products</p>
               </div>
-              <Badge className="bg-green-500/10 text-green-600 text-xs border-green-200">Active</Badge>
-            </div>
-            <div className="space-y-2">
-              <div className="flex justify-between text-xs">
-                <span className="text-muted-foreground">Expires in</span>
-                <span className="font-semibold text-green-600">328 days</span>
+              
+              {/* Stats Summary */}
+              <div className="grid grid-cols-3 gap-2 mb-2">
+                <div className="bg-card rounded-lg border p-2 text-center">
+                  <p className="text-xs text-muted-foreground mb-1">Active</p>
+                  <p className="text-xl font-bold text-green-600">18</p>
+                </div>
+                <div className="bg-card rounded-lg border p-2 text-center">
+                  <p className="text-xs text-muted-foreground mb-1">Expiring</p>
+                  <p className="text-xl font-bold text-orange-600">3</p>
+                </div>
+                <div className="bg-card rounded-lg border p-2 text-center">
+                  <p className="text-xs text-muted-foreground mb-1">Total</p>
+                  <p className="text-xl font-bold">24</p>
+                </div>
               </div>
-              <div className="bg-muted h-1.5 rounded-full overflow-hidden w-full">
-                <div className="bg-green-500 h-full w-3/4 rounded-full"></div>
-              </div>
-            </div>
-          </div>
+              
+              {/* Warranty Cards */}
+              <div className="flex flex-col gap-3">
+                {/* Active Warranty Card */}
+                <div className="bg-card rounded-lg border p-3.5 shadow-sm">
+                  <div className="flex items-center justify-between mb-3">
+                    <div className="flex-1">
+                      <p className="font-semibold text-sm">iPhone 15 Pro</p>
+                      <p className="text-muted-foreground text-xs mt-0.5">Apple Inc.</p>
+                    </div>
+                    <Badge className="bg-green-500/10 text-green-600 text-xs border-green-200">Active</Badge>
+                  </div>
+                  <div className="space-y-2">
+                    <div className="flex justify-between text-xs">
+                      <span className="text-muted-foreground">Expires in</span>
+                      <span className="font-semibold text-green-600">328 days</span>
+                    </div>
+                    <div className="bg-muted h-1.5 rounded-full overflow-hidden">
+                      <div className="bg-green-500 h-full w-3/4 rounded-full"></div>
+                    </div>
+                  </div>
+                </div>
 
-          {/* Expiring Soon Card */}
-          <div className="bg-card rounded-lg border border-orange-200 p-3.5 shadow-sm w-full">
-            <div className="flex items-center justify-between mb-3 w-full">
-              <div className="flex-1 text-left">
-                <p className="font-semibold text-sm">MacBook Pro M3</p>
-                <p className="text-muted-foreground text-xs mt-0.5">Apple Inc.</p>
-              </div>
-              <Badge className="bg-orange-500/10 text-orange-600 text-xs border-orange-200">Expiring</Badge>
-            </div>
-            <div className="space-y-2">
-              <div className="flex justify-between text-xs">
-                <span className="text-muted-foreground">Expires in</span>
-                <span className="font-semibold text-orange-600">45 days</span>
-              </div>
-              <div className="bg-muted h-1.5 rounded-full overflow-hidden w-full">
-                <div className="bg-orange-500 h-full w-1/4 rounded-full"></div>
-              </div>
-            </div>
-          </div>
+                {/* Expiring Soon Card */}
+                <div className="bg-card rounded-lg border border-orange-200 p-3.5 shadow-sm">
+                  <div className="flex items-center justify-between mb-3">
+                    <div className="flex-1">
+                      <p className="font-semibold text-sm">MacBook Pro M3</p>
+                      <p className="text-muted-foreground text-xs mt-0.5">Apple Inc.</p>
+                    </div>
+                    <Badge className="bg-orange-500/10 text-orange-600 text-xs border-orange-200">Expiring</Badge>
+                  </div>
+                  <div className="space-y-2">
+                    <div className="flex justify-between text-xs">
+                      <span className="text-muted-foreground">Expires in</span>
+                      <span className="font-semibold text-orange-600">45 days</span>
+                    </div>
+                    <div className="bg-muted h-1.5 rounded-full overflow-hidden">
+                      <div className="bg-orange-500 h-full w-1/4 rounded-full"></div>
+                    </div>
+                  </div>
+                </div>
 
-          {/* Another Active Card */}
-          <div className="bg-card rounded-lg border p-3.5 shadow-sm w-full">
-            <div className="flex items-center justify-between mb-3 w-full">
-              <div className="flex-1 text-left">
-                <p className="font-semibold text-sm">Samsung TV 65"</p>
-                <p className="text-muted-foreground text-xs mt-0.5">Samsung</p>
+                {/* Another Active Card */}
+                <div className="bg-card rounded-lg border p-3.5 shadow-sm">
+                  <div className="flex items-center justify-between mb-3">
+                    <div className="flex-1">
+                      <p className="font-semibold text-sm">Samsung TV 65"</p>
+                      <p className="text-muted-foreground text-xs mt-0.5">Samsung</p>
+                    </div>
+                    <Badge className="bg-green-500/10 text-green-600 text-xs border-green-200">Active</Badge>
+                  </div>
+                  <div className="space-y-2">
+                    <div className="flex justify-between text-xs">
+                      <span className="text-muted-foreground">Expires in</span>
+                      <span className="font-semibold text-green-600">512 days</span>
+                    </div>
+                    <div className="bg-muted h-1.5 rounded-full overflow-hidden">
+                      <div className="bg-green-500 h-full w-full rounded-full"></div>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <Badge className="bg-green-500/10 text-green-600 text-xs border-green-200">Active</Badge>
             </div>
-            <div className="space-y-2">
-              <div className="flex justify-between text-xs">
-                <span className="text-muted-foreground">Expires in</span>
-                <span className="font-semibold text-green-600">512 days</span>
-              </div>
-              <div className="bg-muted h-1.5 rounded-full overflow-hidden w-full">
-                <div className="bg-green-500 h-full w-full rounded-full"></div>
-              </div>
-            </div>
-          </div>
-        </div>
+          </Mockup>
+        </MockupFrame>
       </div>
-    </Mockup>
-  </MockupFrame>
-</div>
-
     </div>
   ),
   badge = (
@@ -255,18 +255,15 @@ export default function Hero({
           {buttons !== false && buttons.length > 0 && (
             <div className="animate-appear relative z-10 flex justify-center gap-4 opacity-0 delay-300">
               {buttons.map((button, index) => (
-                <Button
-                  key={index}
-                  variant={button.variant || "default"}
-                  size="lg"
-                  asChild
-                >
-                  <a href={button.href}>
+                <SignUpButton key={index} mode="modal" forceRedirectUrl="/waitlist">
+                  <Button variant={button.variant || "default"} asChild>
+                  <a>
                     {button.icon}
                     {button.text}
                     {button.iconRight}
                   </a>
-                </Button>
+                  </Button>
+                </SignUpButton>
               ))}
             </div>
           )}
