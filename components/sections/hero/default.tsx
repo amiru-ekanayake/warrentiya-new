@@ -37,7 +37,7 @@ export default function Hero({
     <div className="relative flex flex-col items-center justify-center w-full max-w-6xl mx-auto gap-6 sm:flex-row sm:gap-10">
       {/* Desktop Mockup - Centered */}
       <div className="hidden sm:block flex-1 max-w-3xl">
-        <MockupFrame className="w-full" size="default">
+        <MockupFrame className="w-full">
           <Mockup
             type="responsive"
             className="bg-background/90 w-full rounded-xl border-0 p-8"
