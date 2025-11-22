@@ -1,3 +1,5 @@
+"use client";
+
 import { type VariantProps } from "class-variance-authority";
 import { Menu } from "lucide-react";
 import { ReactNode } from "react";
@@ -14,6 +16,15 @@ import {
 } from "../../ui/navbar";
 import Navigation from "../../ui/navigation";
 import { Sheet, SheetContent, SheetTrigger } from "../../ui/sheet";
+
+// Clerk imports
+import {
+  SignInButton,
+  SignUpButton,
+  SignedIn,
+  SignedOut,
+  UserButton,
+} from "@clerk/nextjs";
 
 interface NavbarLink {
   text: string;
@@ -42,7 +53,7 @@ interface NavbarProps {
 
 export default function Navbar({
   logo = <LaunchUI />,
-  name = "HukarisAI",
+  name = "Warrantiya",
   homeUrl = siteConfig.url,
   mobileLinks = [
     { text: "Our Services", href: siteConfig.url },
@@ -77,30 +88,41 @@ export default function Navbar({
             </a>
             {showNavigation && (customNavigation || <Navigation />)}
           </NavbarLeft>
+
           <NavbarRight>
-            {actions.map((action, index) =>
-              action.isButton ? (
+            {/* ===================== */}
+            {/*    DESKTOP SECTION    */}
+            {/* ===================== */}
+
+            <SignedOut>
+              {/* Sign in (link style) */}
+              <SignInButton mode="modal">
+                <a className="hidden text-sm md:block cursor-pointer">
+                  Sign in
+                </a>
+              </SignInButton>
+
+              {/* Get Started (button style) */}
+              <SignUpButton mode="modal">
                 <Button
-                  key={index}
-                  variant={action.variant || "default"}
+                  variant="default"
+                  className="hidden md:inline-flex"
                   asChild
                 >
-                  <a href={action.href}>
-                    {action.icon}
-                    {action.text}
-                    {action.iconRight}
-                  </a>
+                  <a>Get Started</a>
                 </Button>
-              ) : (
-                <a
-                  key={index}
-                  href={action.href}
-                  className="hidden text-sm md:block"
-                >
-                  {action.text}
-                </a>
-              ),
-            )}
+              </SignUpButton>
+            </SignedOut>
+
+            <SignedIn>
+              {/* Show avatar when user is logged in */}
+              <UserButton afterSignOutUrl="/" />
+            </SignedIn>
+
+            {/* ===================== */}
+            {/*    MOBILE SECTION     */}
+            {/* ===================== */}
+
             <Sheet>
               <SheetTrigger asChild>
                 <Button
@@ -112,6 +134,7 @@ export default function Navbar({
                   <span className="sr-only">Toggle navigation menu</span>
                 </Button>
               </SheetTrigger>
+
               <SheetContent side="right">
                 <nav className="grid gap-6 text-lg font-medium">
                   <a
@@ -120,6 +143,7 @@ export default function Navbar({
                   >
                     <span>{name}</span>
                   </a>
+
                   {mobileLinks.map((link, index) => (
                     <a
                       key={index}
@@ -129,6 +153,26 @@ export default function Navbar({
                       {link.text}
                     </a>
                   ))}
+
+                  <SignedOut>
+                    {/* Mobile sign in */}
+                    <SignInButton mode="modal">
+                      <a className="cursor-pointer text-muted-foreground hover:text-foreground">
+                        Sign in
+                      </a>
+                    </SignInButton>
+
+                    {/* Mobile get started */}
+                    <SignUpButton mode="modal">
+                      <Button className="mt-2 w-full">Get Started</Button>
+                    </SignUpButton>
+                  </SignedOut>
+
+                  <SignedIn>
+                    <div className="pt-4">
+                      <UserButton afterSignOutUrl="/" />
+                    </div>
+                  </SignedIn>
                 </nav>
               </SheetContent>
             </Sheet>

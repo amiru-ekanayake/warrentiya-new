@@ -1870,7 +1870,7 @@ function Navbar({ logo = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$pr
     fileName: "[project]/components/sections/navbar/default.tsx",
     lineNumber: 44,
     columnNumber: 10
-}, ("TURBOPACK compile-time value", void 0)), name = "HukarisAI", homeUrl = __TURBOPACK__imported__module__$5b$project$5d2f$config$2f$site$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["siteConfig"].url, mobileLinks = [
+}, ("TURBOPACK compile-time value", void 0)), name = "Warrantiya", homeUrl = __TURBOPACK__imported__module__$5b$project$5d2f$config$2f$site$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["siteConfig"].url, mobileLinks = [
     {
         text: "Our Services",
         href: __TURBOPACK__imported__module__$5b$project$5d2f$config$2f$site$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["siteConfig"].url

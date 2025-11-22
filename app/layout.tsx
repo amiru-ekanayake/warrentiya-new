@@ -1,6 +1,7 @@
 import "@/app/globals.css";
 
 import type { Metadata } from "next";
+import { ClerkProvider } from "@clerk/nextjs";
 
 import { ThemeProvider } from "@/components/contexts/theme-provider";
 import { inter } from "@/lib/fonts";
@@ -66,9 +67,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" style={{ colorScheme: "dark" }} className="dark">
-      <body className={`${inter.className} bg-background antialiased`}>
-        <ThemeProvider>{children}</ThemeProvider>
-      </body>
+      <ClerkProvider>
+        <body className={`${inter.className} bg-background antialiased`}>
+          <ThemeProvider>{children}</ThemeProvider>
+        </body>
+      </ClerkProvider>
     </html>
   );
 }
