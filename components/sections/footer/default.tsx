@@ -39,7 +39,7 @@ export default function FooterSection({
     {
       title: "Our Services",
       links: [
-        { text: "Changelog", href: '#' },
+        { text: "Features", href: '#' },
         { text: "Documentation", href: '#' },
       ],
     },
@@ -53,8 +53,8 @@ export default function FooterSection({
     {
       title: "About Us",
       links: [
-        { text: "Discord", href: '#' },
         { text: "Github", href: '#' },
+        { text: "Linkedin", href: '#' },
       ],
     },
   ],
