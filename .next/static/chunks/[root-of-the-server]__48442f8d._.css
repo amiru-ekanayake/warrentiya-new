@@ -896,10 +896,6 @@
     height: calc(var(--spacing) * 10);
   }
 
-  .h-16 {
-    height: calc(var(--spacing) * 16);
-  }
-
   .h-24 {
     height: calc(var(--spacing) * 24);
   }
@@ -1711,10 +1707,6 @@
 
   .border-t-primary {
     border-top-color: var(--primary);
-  }
-
-  .bg-\[\#6c47ff\] {
-    background-color: #6c47ff;
   }
 
   .bg-background {
@@ -3360,12 +3352,6 @@
   }
 
   @media (min-width: 40rem) {
-    .sm\:h-12 {
-      height: calc(var(--spacing) * 12);
-    }
-  }
-
-  @media (min-width: 40rem) {
     .sm\:h-\[256px\] {
       height: 256px;
     }
@@ -3476,12 +3462,6 @@
     :where(.sm\:space-x-2 > :not(:last-child)):is(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi)) {
       margin-right: calc(calc(var(--spacing) * 2) * var(--tw-space-x-reverse));
       margin-left: calc(calc(var(--spacing) * 2) * calc(1 - var(--tw-space-x-reverse)));
-    }
-  }
-
-  @media (min-width: 40rem) {
-    .sm\:px-5 {
-      padding-inline: calc(var(--spacing) * 5);
     }
   }
 
