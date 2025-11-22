@@ -49,16 +49,20 @@ export default function Navigation({
   menuItems = [
     {
       title: "Our Services",
-      content: "default",
+      isLink: true,
+      href: '#',
+      
     },
     {
       title: "Stats",
-      content: "components",
+      isLink: true,
+      href: "#",
+
     },
     {
       title: "About Us",
       isLink: true,
-      href: siteConfig.url,
+      href: '#',
     },
   ],
   components = [
