@@ -3,7 +3,7 @@ export const siteConfig = {
   url: "https://launchuicomponents.com",
   getStartedUrl:
     "https://launchuicomponents.com/docs/getting-started/introduction",
-  ogImage: "https://launchuicomponents.com/og.jpg",
+  ogImage: "https://warrantiya.vercel.app/",
   description:
     "Landing page components built with React, Shadcn/ui and Tailwind that will make your website feel premium.",
   links: {
