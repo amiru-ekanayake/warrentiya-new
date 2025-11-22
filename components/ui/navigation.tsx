@@ -64,6 +64,11 @@ export default function Navigation({
       isLink: true,
       href: '#',
     },
+    {
+      title: "FAQ",
+      isLink: true,
+      href: '#',
+    },
   ],
   components = [
     {

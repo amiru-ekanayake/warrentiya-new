@@ -47,14 +47,14 @@ export default function FAQ({
         </>
       ),
     },
-    {
-      question: "Is Warrantiya free to use?",
-      answer: (
-        <p className="text-muted-foreground mb-4 max-w-[640px]">
-          Yes! You can create an account and manage as many warranties as you want for free. We may offer premium features for businesses, but core tracking and notifications are always free for personal users.
-        </p>
-      ),
-    },
+    // {
+    //   question: "Is Warrantiya free to use?",
+    //   answer: (
+    //     <p className="text-muted-foreground mb-4 max-w-[640px]">
+    //       Yes! You can create an account and manage as many warranties as you want for free. We may offer premium features for businesses, but core tracking and notifications are always free for personal users.
+    //     </p>
+    //   ),
+    // },
     {
       question: "Can I use Warrantiya on my mobile device?",
       answer: (
