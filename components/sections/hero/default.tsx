@@ -120,7 +120,7 @@ export default function Hero({
       {/* Mobile Mockup - Centered alongside desktop */}
       {/* Mobile Mockup - Always visible, centered */}
 <div className="flex-shrink-0 w-full max-w-xs sm:max-w-[20rem]">
-  <MockupFrame type="mobile" className="w-full shadow-2xl">
+  <MockupFrame className="w-full shadow-2xl">
     <Mockup className="bg-background/95 w-full rounded-2xl border-0 p-5">
       <div className="flex flex-col items-center w-full gap-4">
         {/* Mobile Header - Centered */}
