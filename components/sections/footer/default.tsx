@@ -34,36 +34,34 @@ interface FooterProps {
 
 export default function FooterSection({
   logo = <LaunchUI />,
-  name = "Launch UI",
+  name = "Warrantiya",
   columns = [
     {
-      title: "Product",
+      title: "Our Services",
       links: [
-        { text: "Changelog", href: siteConfig.url },
-        { text: "Documentation", href: siteConfig.url },
+        { text: "Changelog", href: '#' },
+        { text: "Documentation", href: '#' },
       ],
     },
     {
-      title: "Company",
+      title: "Stats",
       links: [
-        { text: "About", href: siteConfig.url },
-        { text: "Careers", href: siteConfig.url },
-        { text: "Blog", href: siteConfig.url },
+        { text: "About", href: '#' },
+        { text: "Blog", href: '#' },
       ],
     },
     {
-      title: "Contact",
+      title: "About Us",
       links: [
-        { text: "Discord", href: siteConfig.url },
-        { text: "Twitter", href: siteConfig.url },
-        { text: "Github", href: siteConfig.links.github },
+        { text: "Discord", href: '#' },
+        { text: "Github", href: '#' },
       ],
     },
   ],
-  copyright = "© 2025 Mikołaj Dobrucki. All rights reserved",
+  copyright = "© 2025 Warrantiya. All rights reserved",
   policies = [
-    { text: "Privacy Policy", href: siteConfig.url },
-    { text: "Terms of Service", href: siteConfig.url },
+    { text: "Privacy Policy", href: '#' },
+    { text: "Terms of Service", href: '#' },
   ],
   showModeToggle = true,
   className,
@@ -73,7 +71,7 @@ export default function FooterSection({
       <div className="max-w-container mx-auto">
         <Footer>
           <FooterContent>
-            <FooterColumn className="col-span-2 sm:col-span-3 md:col-span-1">
+            <FooterColumn className="col-span-2 sm:col-span-3 md:col-span-2">
               <div className="flex items-center gap-2">
                 {logo}
                 <h3 className="text-xl font-bold">{name}</h3>
