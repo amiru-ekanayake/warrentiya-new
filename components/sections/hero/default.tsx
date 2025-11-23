@@ -2,6 +2,8 @@ import { type VariantProps } from "class-variance-authority";
 import { ArrowRightIcon } from "lucide-react";
 import { ReactNode } from "react";
 
+import { SignInButton, SignUpButton } from "@clerk/nextjs";
+
 import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
 
@@ -255,18 +257,15 @@ export default function Hero({
           {buttons !== false && buttons.length > 0 && (
             <div className="animate-appear relative z-10 flex justify-center gap-4 opacity-0 delay-300">
               {buttons.map((button, index) => (
-                <Button
-                  key={index}
-                  variant={button.variant || "default"}
-                  size="lg"
-                  asChild
-                >
-                  <a href={button.href}>
+                <SignUpButton key={index} mode="modal" forceRedirectUrl="/waitlist">
+                  <Button variant={button.variant || "default"} asChild>
+                  <a>
                     {button.icon}
                     {button.text}
                     {button.iconRight}
                   </a>
-                </Button>
+                  </Button>
+                </SignUpButton>
               ))}
             </div>
           )}
