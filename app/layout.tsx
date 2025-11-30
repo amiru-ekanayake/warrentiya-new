@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     creator: "@mikolajdobrucki",
   },
   icons: {
-    icon: "/favicon.svg",
+    icon: "/logo2.png",
     apple: "/apple-touch-icon.png",
   },
 };
