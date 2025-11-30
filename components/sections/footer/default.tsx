@@ -33,7 +33,7 @@ interface FooterProps {
 }
 
 export default function FooterSection({
-  logo = <LaunchUI />,
+  logo = <img src="/assets/logo2.png" alt="Logo" style={{ height: 50 }} />,
   name = "Warrantiya",
   columns = [
     {

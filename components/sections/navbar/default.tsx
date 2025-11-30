@@ -52,7 +52,7 @@ interface NavbarProps {
 }
 
 export default function Navbar({
-  logo = <LaunchUI />,
+  logo = <img src="/assets/logo2.png" alt="Logo" style={{ height: 50 }} />,
   name = "Warrantiya",
   homeUrl = siteConfig.url,
   mobileLinks = [

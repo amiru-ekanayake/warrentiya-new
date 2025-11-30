@@ -105,7 +105,7 @@
     }
     100% {
       opacity: 1;
-      transform: scale(1);
+      transform: scale(0.8);
     }
   }
 }
@@ -161,8 +161,8 @@
 
 .dark {
   /* Accent colors */
-  --brand: oklch(83.6% 0.1177 66.87);
-  --brand-foreground: oklch(75.77% 0.159 55.91);
+  --brand: oklch(64.525% 0.19864 288.137);
+  --brand-foreground: oklch(52.567% 0.26292 279.226);
 
   /* Customized shadcn/ui colors */
   --background: oklch(0.141 0.005 285.823);
