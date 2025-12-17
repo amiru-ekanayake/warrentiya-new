@@ -1,6 +1,6 @@
 export const siteConfig = {
   name: "Warrantiya",
-  url: "https://launchuicomponents.com",
+  url: "",
   getStartedUrl:
     "https://launchuicomponents.com/docs/getting-started/introduction",
   ogImage: "https://warrantiya.vercel.app/",
