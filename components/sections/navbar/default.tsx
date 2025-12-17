@@ -86,7 +86,7 @@ export default function Navbar({
               {logo}
               {name}
             </a>
-            {showNavigation && (customNavigation || <Navigation />)}
+            {showNavigation && (customNavigation)}
           </NavbarLeft>
 
           <NavbarRight>
